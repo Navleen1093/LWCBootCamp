@@ -1,0 +1,18 @@
+<template>
+    <!--<template if:true={contacts.length} for:each={contacts} for:item="con" for:index='index'>
+        <div class="slds-box" key={con.Id}>{index}-{con.Name}-{con.Email}</div>
+    </template>-->
+    <lightning-card title="For:Each Demo" icon-name="standard:contact">
+        <lightning-datatable key-field="id" data={contacts} hide-checkbox-column columns={columns}>
+        </lightning-datatable>
+    </lightning-card>
+    <div class="slds-p-top_large">
+    <lightning-card title="Iterator Demo" icon-name="standard:contact">
+        <div class="slds-border_top"></div>
+        <template iterator:con={contacts}>
+            <div  class="slds-p-left_x-small slds-p-bottom_x-small" key={con.value.Id}>{con.value.Name}-{con.value.Email}</div>
+        </template>
+        <div class="slds-border_bottom"></div>
+    </lightning-card>
+    </div>
+</template>
