@@ -4,11 +4,7 @@ export default class ChildComponent extends LightningElement {
     @api num = 'Child One';
     @api label = 'Select';
     @api variant = 'success';
-    @api
-    resetChild(){
-        this.label='Select';
-        this.variant='success';
-    }
+ 
     handleOnClick(){
         console.log('child component js');
         if(this.label==='Select'){
