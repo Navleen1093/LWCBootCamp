@@ -1,0 +1,142 @@
+<template>
+    <div class="slds-grid slds-gutters">
+        <div class="slds-col">
+            <lightning-card title="Account Quick Create" icon-name="standard:account">
+                <lightning-button class="slds-m-top_small" onclick={showAccountFields} label="Show All Account Fields"
+                    slot="actions">
+                </lightning-button>
+                <lightning-record-edit-form object-api-name="Account" onsuccess={handleSuccess}>
+                    <lightning-input-field field-name="Name">
+                    </lightning-input-field>
+                    <template if:true={showAccounts}>
+                        <lightning-input-field field-name='AccountNumber'>
+                        </lightning-input-field>
+                        <lightning-input-field field-name='Industry'>
+                        </lightning-input-field>
+                        <lightning-input-field field-name='Site'>
+                        </lightning-input-field>
+                        <lightning-input-field field-name='AccountSource'>
+                        </lightning-input-field>
+                        <lightning-input-field field-name='Active__c'>
+                        </lightning-input-field>
+                        <lightning-input-field field-name='AnnualRevenue'>
+                        </lightning-input-field>
+                        <lightning-input-field field-name='BillingAddress'>
+                        </lightning-input-field>
+                        <lightning-input-field field-name='CleanStatus'>
+                        </lightning-input-field>
+                        <lightning-input-field field-name='CustomerPriority__c'>
+                        </lightning-input-field>
+                        <lightning-input-field field-name='Phone'>
+                        </lightning-input-field>
+
+                    </template>
+                    <div class="slds-align_absolute-center">
+                        <lightning-button class="slds-p-top_small" onclick={handleReset}
+                            label="Cancel">
+                        </lightning-button>
+                        <lightning-button class="slds-p-top_small slds-p-left_x-small" type="submit" variant="brand" label="Save">
+                        </lightning-button>
+                    </div>
+                </lightning-record-edit-form>
+            </lightning-card>
+        </div>
+        <div class="slds-col">
+            <lightning-card title="Opportunity Quick Create" icon-name="standard:opportunity">
+                <lightning-button class="slds-m-top_small" onclick={showOpprtunityFields}
+                    label="Show All Opportunity Fields" slot="actions">
+                </lightning-button>
+                <lightning-record-edit-form object-api-name="Opportunity" onsuccess={handleSuccess}>
+                    <div class="slds-grid slds-gutters">
+                        <div class="slds-col">
+                            <lightning-input-field field-name="Name">
+                            </lightning-input-field>
+                        </div>
+                        <div class="slds-col">
+                            <lightning-input-field field-name="CloseDate">
+                            </lightning-input-field>
+                        </div>
+                    </div>
+                    <div class="slds-grid slds-gutters">
+                        <div class="slds-col">
+                            <lightning-input-field field-name="StageName">
+                            </lightning-input-field>
+                        </div>
+                        <div class="slds-col">
+                            <lightning-input-field field-name="AccountId">
+                            </lightning-input-field>
+                        </div>
+                    </div>
+
+                    <template if:true={showOpportunity}>
+                        <lightning-input-field field-name='Amount'>
+                        </lightning-input-field>
+                        <lightning-input-field field-name='ContractId'>
+                        </lightning-input-field>
+                        <lightning-input-field field-name='ExpectedRevenue'>
+                        </lightning-input-field>
+                        <lightning-input-field field-name='LeadSource'>
+                        </lightning-input-field>
+                        <lightning-input-field field-name='OrderNumber__c'>
+                        </lightning-input-field>
+                        <lightning-input-field field-name='CampaignId'>
+                        </lightning-input-field>
+                        <lightning-input-field field-name='Type'>
+                        </lightning-input-field>
+
+                    </template>
+                    <div class="slds-align_absolute-center">
+                        <lightning-button class="slds-p-top_small " onclick={handleReset}
+                            label="Cancel">
+                        </lightning-button>
+                        <lightning-button class="slds-p-top_small slds-p-left_x-small" type="submit" variant="brand" label="Save">
+                        </lightning-button>
+
+                    </div>
+                </lightning-record-edit-form>
+            </lightning-card>
+        </div>
+    </div>
+
+    <lightning-card title="Contact Quick Create" icon-name="standard:contact">
+        <lightning-button class="slds-m-top_small" onclick={showContactFields} label="Show All Contact Fields"
+            slot="actions">
+        </lightning-button>
+        <lightning-record-edit-form object-api-name="Contact" onsuccess={handleSuccess}>
+            <div class="slds-grid slds-gutters">
+                <div class="slds-col">
+                    <lightning-input-field field-name="Name">
+                    </lightning-input-field>
+                </div>
+                <div class="slds-col">
+                    <lightning-input-field field-name="AccountId">
+                    </lightning-input-field>
+                </div>
+            </div>
+            <template if:true={showContact}>
+                <lightning-input-field field-name='Email'>
+                </lightning-input-field>
+                <lightning-input-field field-name='Languages__c'>
+                </lightning-input-field>
+                <lightning-input-field field-name='LeadSource'>
+                </lightning-input-field>
+                <lightning-input-field field-name='Level__c'>
+                </lightning-input-field>
+                <lightning-input-field field-name='MailingAddress'>
+                </lightning-input-field>
+                <lightning-input-field field-name='MobilePhone'>
+                </lightning-input-field>
+                <lightning-input-field field-name='OtherAddress'>
+                </lightning-input-field>
+
+            </template>
+            <div class="slds-align_absolute-center">
+                <lightning-button class="slds-p-top_small " onclick={handleReset} label="Cancel">
+                </lightning-button>
+                <lightning-button class="slds-p-top_small slds-p-left_x-small" type="submit" variant="brand" label="Save">
+                </lightning-button>
+
+            </div>
+        </lightning-record-edit-form>
+    </lightning-card>
+</template>
