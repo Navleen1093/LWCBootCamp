@@ -1,0 +1,33 @@
+<template>
+    <lightning-card class ="slds-box" title="Full Calculator" icon-name="custom:custom34">
+        <p>Calc Expression</p>
+        {calculation}
+        <p>Result</p>
+        {result}
+        <div  class="slds-border_bottom slds-p-bottom_small"></div>
+        <div class="slds-size_2-of-2 slds-border_bottom slds-p-bottom_small slds-p-top_x-small" >
+            <lightning-button  class="slds-p-left_x-small slds-p-right_x-small " label="1" onclick={one}> </lightning-button>
+            <lightning-button  class="slds-p-left_x-small slds-p-right_x-small " label="2" onclick={two}> </lightning-button>
+            <lightning-button  class="slds-p-left_x-small slds-p-right_x-small " label="3" onclick={three}> </lightning-button>
+            <lightning-button  variant ="brand" class="slds-p-left_x-small slds-p-right_x-small " label="+" onclick={add}> </lightning-button>
+        </div>
+        <div class="slds-size_2-of-2 slds-border_bottom slds-p-bottom_small slds-p-top_x-small">
+            <lightning-button  class="slds-p-left_x-small slds-p-right_x-small " label="4" onclick={four}> </lightning-button>
+            <lightning-button  class="slds-p-left_x-small slds-p-right_x-small" label="5" onclick={five}> </lightning-button>
+            <lightning-button  class="slds-p-left_x-small slds-p-right_x-small" label="6" onclick={six}> </lightning-button>
+            <lightning-button   variant ="brand" class="slds-p-left_x-small slds-p-right_x-small" label="-" onclick={sub}> </lightning-button>
+        </div>
+        <div class="slds-size_2-of-2 slds-border_bottom slds-p-bottom_small slds-p-top_x-small">
+            <lightning-button  class="slds-p-left_x-small slds-p-right_x-small" label="7" onclick={seven}> </lightning-button>
+            <lightning-button  class="slds-p-left_x-small slds-p-right_x-small" label="8" onclick={eight}> </lightning-button>
+            <lightning-button  class="slds-p-left_x-small slds-p-right_x-small" label="9" onclick={nine}> </lightning-button>
+            <lightning-button   variant ="brand" class="slds-p-left_x-small slds-p-right_x-small" label="*" onclick={mul}> </lightning-button>
+        </div>
+        <div class="slds-size_2-of-2 slds-border_bottom slds-p-bottom_small slds-p-top_x-small">
+            <lightning-button  class="slds-p-left_x-small slds-p-right_x-small " label="CLR" onclick={clear}> </lightning-button>
+            <lightning-button  class="slds-p-left_x-small slds-p-right_x-small " label="0" onclick={zero}> </lightning-button>
+            <lightning-button   variant ="success" class="slds-p-left_x-small slds-p-right_x-small " label="=" onclick={equal}> </lightning-button>
+            <lightning-button   variant ="brand" class="slds-p-left_x-small slds-p-right_x-small " label="/" onclick={div}> </lightning-button>
+        </div>
+    </lightning-card>
+</template>
